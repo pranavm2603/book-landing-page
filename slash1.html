@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookHaven - Where Every Page Feels Like Home</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Add border styles for tables */
+        .book-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .book-table th,
+        .book-table td {
+            border: 1px solid #130000;
+            padding: 5px;
+            text-align: left;
+        }
+
+        .book-table th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705588754/LibraVerse_xhmbwk.png"
+                alt="LibraVerse Logo" class="logo"
+                style="height: 150px; width: 150px; object-fit: cover; object-position: center;" />
+        </div>
+        <h1 style="color: black;">
+            <span class="custom-underline">BookHaven -Where Every Page Feels Like Home</span>
+        </h1>
+        <p><b>Your Ultimate Reading Destination</b></p>
+    </header>
+
+    <!-- Task 1: Dropdown for Language Selection -->
+    <div class="language-select">
+        <label for="language" class="select-label"><b><u>Select Language:</u></b></label>
+        <div class="select-wrapper" id="selectWrapper">
+            <select id="language" onchange="changeLanguage(this.value)">
+                <option value="" selected disabled hidden></option>
+                <option value="english">English</option>
+                <option value="telugu">Telugu</option>
+                <option value="tamil">Tamil</option>
+                <option value="hindi">Hindi</option>
+                <option value="marathi">Marathi</option>
+            </select>
+        </div>
+    </div>
+
+    <section class="language-books">
+        <!-- English Column (initially hidden) -->
+        <div class="column english" style="background-color: hwb(0 100% 0% / 0.767); display: none;">
+            <div style="text-align: center;">
+                <img src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705749478/_b9ede597-dee0-4eb0-a9bb-236a27f1c2fd_qqxzyg.jpg"
+                    alt="English Book Logo" class="book-logo" style="max-width: 100px; max-height: 100px;">
+                <h2 style="color: #531b4e; font-size: 24px; margin-top: 10px;">Explore English Books at LibraVerse</h2>
+                <p class="book-description" style="font-size: 16px; color: #333; line-height: 1.5;">
+                    Embark on a captivating journey through the enchanting world of LibraVerse - your ultimate reading
+                    destination.
+                    Immerse yourself in a vast collection of English books that spans diverse genres, ranging from
+                    timeless classics to compelling contemporary fiction.
+                    LibraVerse invites you to explore the magic of literature, where each page holds the promise of new
+                    adventures and profound storytelling.
+                </p>
+                <ul class="book-highlights" style="list-style: none; padding: 0; margin: 20px 0;">
+                    <h1 style="font-size: 20px; color: hsl(231, 92%, 52%); margin-bottom: 10px;"><b><u>Book
+                                highlights</u></b></h1>
+                    <li style="color: #197b91; font-size: 18px; margin-bottom: 5px;">Bestsellers</li>
+                    <li style="color: #197b91; font-size: 18px; margin-bottom: 5px;">Award-Winning Novels</li>
+                    <li style="color: #197b91; font-size: 18px;">Classic Literature</li>
+                </ul>
+            </div>
+
+            <!-- Table for Book 1 -->
+            <table class="book-table">
+                <thead>
+                    <tr>
+                        <th style="width: 10%; text-align: center;"><u>Book</u></th>
+                        <th style="width: 12%; text-align: center;"><u>Title</u></th>
+                        <th style="width: 34%;text-align: center;"><u>Description</u></th>
+                        <th style="width: 5%;text-align: center;"><u>Price</u></th>
+                        <th style="width: 5%;text-align: center;"><u>Contact</u></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Book 1: Example Tree Structure -->
+                    <tr>
+                        <td style="text-align: center;"><img
+                                src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705727789/ywwnjoja59folfrfkjw5.jpg"
+                                alt="English Book 1 Logo" class="sub-book-logo"></td>
+                        <td style="color: #100c04;text-align: center;"><b>Rich Dad & Poor Dad</b></td>
+                        <td><b>Wealth Mindset:</b><br>
+                            <b>👉</b>The book emphasizes the importance of cultivating a wealth mindset. <br>
+                            <b>👉</b>Kiyosaki contrasts the attitudes and approaches of his "Rich Dad" and "Poor Dad."
+                            <br>
+                            <b>👉</b>Rich Dad focuses on creating assets that generate income, while Poor Dad emphasizes
+                            job security and a traditional approach to earning money.
+                        </td>
+                        <td style="text-align: center;">50/-</td>
+                        <td style="text-align: center;">00000000000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Table for Book 2 -->
+            <table class="book-table">
+                <thead>
+                    <tr>
+                        <th style="width: 10%; text-align: center;"><u>Book</u></th>
+                        <th style="width: 12%; text-align: center;"><u>Title</u></th>
+                        <th style="width: 34%;text-align: center;"><u>Description</u></th>
+                        <th style="width: 5%;text-align: center;"><u>Price</u></th>
+                        <th style="width: 5%;text-align: center;"><u>Contact</u></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Book 2: Example Tree Structure -->
+                    <tr>
+                        <td style="text-align: center;">
+                            <img src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705727809/jd6oncpuv8x7udtaiqwf.jpg"
+                                alt="English Book 2 Logo" class="sub-book-logo">
+                        </td>
+                        </td>
+                        <td style="color: rgb(10, 19, 10);text-align: center;"><b>The MiracleMorning</b></td>
+                        <td><b>Morning Routine for Personal Development:</b><br>
+                            <b>👉</b>Similar to "Rich Dad Poor Dad," "The Miracle Morning" emphasizes the importance of
+                            a positive morning routine. <br>
+                            <b>👉</b>Elrod introduces the concept of SAVERS, which stands for Silence, Affirmations,
+                            Visualization, Exercise, Reading, Scribing and journaling themes.<br>
+                            <b>👉</b>This routine is designed to enhance personal development and set a positive tone
+                            for the day.
+                        </td>
+                        <td style="text-align: center;">50/-</td>
+                        <td style="text-align: center;">00000000000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Table for Book 3 -->
+            <table class="book-table">
+                <thead>
+                    <tr>
+                        <th style="width: 10%; text-align: center;"><u>Book</u></th>
+                        <th style="width: 12%; text-align: center;"><u>Title</u></th>
+                        <th style="width: 34%;text-align: center;"><u>Description</u></th>
+                        <th style="width: 5%;text-align: center;"><u>Price</u></th>
+                        <th style="width: 5%;text-align: center;"><u>Contact</u></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Book 3: Placeholder for Tree Structure -->
+                    <tr>
+                        <td style="text-align: center;">
+                            <img src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705727829/jakgbkuejzn5dpi4a8ss.jpg"
+                                alt="English Book 3 Logo" class="sub-book-logo">
+                        </td>
+                        </td>
+                        <td style="color: #030a08;text-align: center;"><b>The Alchemist25thED</b></td>
+                        <td><b>The Journey and Transformation:</b><br>
+                            <b>👉</b>"The Alchemist" emphasizes the transformative power of the journey. <br>
+                            <b>👉</b>The protagonist, Santiago, embarks on a physical and spiritual journey in search of
+                            a hidden treasure.<br>
+                            <b>👉</b>The book underscores the idea that the pursuit of dreams is not just about reaching
+                            a destination but also about self-discovery and personal growth.
+                        </td>
+                        <td style="text-align: center;">50/-</td>
+                        <td style="text-align: center;">00000000000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Table for Book 4 -->
+            <table class="book-table">
+                <thead>
+                    <tr>
+                        <th style="width: 10%; text-align: center;"><u>Book</u></th>
+                        <th style="width: 12%; text-align: center;"><u>Title</u></th>
+                        <th style="width: 34%;text-align: center;"><u>Description</u></th>
+                        <th style="width: 5%;text-align: center;"><u>Price</u></th>
+                        <th style="width: 5%;text-align: center;"><u>Contact</u></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Book 4: Placeholder for Tree Structure -->
+                    <tr>
+                        <td style="text-align: center;">
+                            <img src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705730048/WhatsApp_Image_2024-01-19_at_09.48.43_3a376edb_umzog4.jpg"
+                                alt="English Book 4 Logo" class="sub-book-logo">
+                        </td>
+                        </td>
+                        <td style="color: #0f0d0d; text-align: center;"><b>Control Systems Book</b></td>
+                        <td><b>Control System Design and Implementation:</b><br>
+                            <b>👉</b>A key feature is the coverage of control system design methodologies.<br>
+                            <b>👉</b>This includes methods for designing controllers, analyzing system performance, and
+                            implementing control strategies. Practical aspects of implementation,<br>
+                            <b>👉</b>including the use of software tools and simulations, may also be included.
+                        </td>
+                        <td style="text-align: center;">50/-</td>
+                        <td style="text-align: center;">00000000000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+
+
+    <section class="language-books">
+        <div class="column telugu" style="background-color: hsl(78, 28%, 93%); display: none;">
+            <div style="text-align: center;">
+                <img src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705854957/ydm8exnfg0c3x74dwgg0.png"
+                    alt="Telugu Book Logo" class="book-logo" style="max-width: 200px; max-height: 200px;">
+                <h2 style="color: #531b4e; font-size: 24px; margin-top: 10px;"><b>లిబ్రావర్స్‌లో తెలుగు పుస్తకాలు
+                        అన్వేషించండి.</b></h2>
+                <p class="book-description" style="font-size: 16px; color: #333; line-height: 1.5;">
+                    లిబ్రావర్స్‌లో తెలుగు పుస్తకాల అద్భుతాల ప్రపంచంలో ఒక కనుక ఆకర్షణ యాత్రను అనుభవించండి. టెలికస్ట్
+                    క్లాసిక్స్ నుంచి ఆకర్షకమైన సమకాలీన కథానాయకుల వరకూ, వివిధ జార్నర్లను ఆవిష్కరించండి.
+                    లిబ్రావర్స్ మీకు తెలుగు సాహిత్యాన్ని అనవసరమైన ప్రముఖ వాచకులకు తెలియజేస్తుంది.
+                    ప్రతి పేజీలో కొన్ని అద్భుత కథలు, అద్వితీయ చరిత్రాలు మరియు ప్రగటించటానికి ప్రతి పేజీలో మార్జిన్ నందు
+                    ఉంటుంది.
+                </p>
+                <ul class="book-highlights" style="list-style: none; padding: 0; margin: 20px 0;">
+                    <h1 style="font-size: 20px; color: hsl(231, 92%, 52%); margin-bottom: 10px;"><b><u>పుస్తక
+                                హైలైట్స్</u></b></h1>
+                    <li style="color: #197b91; font-size: 18px; margin-bottom: 5px;">బెస్ట్సెల్లర్స్</li>
+                    <li style="color: #197b91; font-size: 18px; margin-bottom: 5px;">అవార్డు-విజేతలు నవలలు</li>
+                    <li style="color: #197b91; font-size: 18px;">క్లాసిక్ సాహిత్యం</li>
+                </ul>
+                <br>
+                <!-- Table for Book 1 -->
+                <div style="text-align: center;">
+                    <!-- Table for Book 1 -->
+                    <table class="book-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 10%; text-align: center;"><u>Book</u></th>
+                                <th style="width: 10%; text-align: center;"><u>Title</u></th>
+                                <th style="width: 34%;text-align: center;"><u>Description</u></th>
+                                <th style="width: 5%;text-align: center;"><u>Price</u></th>
+                                <th style="width: 5%;text-align: center;"><u>Contact</u></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Book 1: Example Tree Structure -->
+                            <tr>
+                                <td style="text-align: center;">
+                                    <img src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705855159/HYF30MURALI_SANKAR_dqa7lt.jpg"
+                                        alt="Telugu Book 1 Logo" class="sub-book-logo">
+                                </td>
+                                </td>
+                                <td style="color: rgb(7, 1, 1); text-align: center;"><b>వేయి పడగలు</b></td>
+                                <td><b>ప్రముఖ విషయాలు:</b><br>
+                                    <b>👉</b>కథలో చాలా సౌందర్యం మరియు అర్థం కలిగిస్తే, "వేయి పడగలు" ఒక విశిష్ట అనుభవం
+                                    అందిస్తుంది.<br>
+                                    <b>ప్రముఖ పాత్రలు:</b><br>
+                                    <b>👉</b>ఈ పుస్తకంలో కథా ప్రవాహంలో ప్రముఖ పాత్రలు ఒక నాటకమేంటో పాటు రసాన్ని
+                                    చూపుతుంది.
+                                </td>
+                                <td style="text-align: center;">50/-</td>
+                                <td style="text-align: center;">00000000000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Table for Book 2 -->
+                    <table class="book-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 10%; text-align: center;"><u>Book</u></th>
+                                <th style="width: 10%; text-align: center;"><u>Title</u></th>
+                                <th style="width: 34%;text-align: center;"><u>Description</u></th>
+                                <th style="width: 5%;text-align: center;"><u>Price</u></th>
+                                <th style="width: 5%;text-align: center;"><u>Contact</u></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Book 2: Example Tree Structure -->
+                            <tr>
+                                <td style="text-align: center;">
+                                    <img src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705855260/13117833_e3hclj.jpg"
+                                        alt="Book 2 Telugu Logo" class="sub-book-logo">
+                                </td>
+                                </td>
+                                <td style="color: rgb(7, 1, 1);text-align: center;"><b>మైదానం</b></td>
+                                <td><b>కథా హైలైట్స్:</b><br>
+                                    <b>👉</b>"మైదానం" గాని, ఆ సమయంలో ప్రేమ, సహనం, మరియు సాహసాన్ని బొమ్మ గాని
+                                    చూపుతుంది.<br>
+                                    <b>ప్రభావశాలు:</b><br>
+                                    <b>👉</b>ఈ పుస్తకం ద్వారా కలిసిపోతున్న వివిధ చరిత్రాలు మరియు భావనలను ఆధరించి,
+                                    మానవత్వంలో ఒక దృష్టికోనం కలిగిస్తాయి.
+                                </td>
+                                <td style="text-align: center;">50/-</td>
+                                <td style="text-align: center;">00000000000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Table for Book 3 -->
+                    <table class="book-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 10%; text-align: center;"><u>Book</u></th>
+                                <th style="width: 10%; text-align: center;"><u>Title</u></th>
+                                <th style="width: 34%;text-align: center;"><u>Description</u></th>
+                                <th style="width: 5%;text-align: center;"><u>Price</u></th>
+                                <th style="width: 5%;text-align: center;"><u>Contact</u></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Book 3: Placeholder for Tree Structure -->
+                            <tr>
+                                <td style="text-align: center;">
+                                    <img src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705855407/kanyasulkam4326_1024x1024_g5eovp.webp"
+                                        alt="Telugu Book 3 Logo" class="sub-book-logo">
+                                </td>
+                                <td style="color: #010b08;text-align: center;"><b>కన్యాశుల్కం</b></td>
+                                <td><b>ప్రముఖ కథా బరిలో:</b><br>
+                                    <b>👉</b>"కన్యాశుల్కం" గాని, అత్యంత ఆసక్తికరమైన కథా బరి లో బయటపడించే నాటకం.<br>
+                                    <b>రంగ నాటక సౌందర్యం:</b><br><br>
+                                    <b>👉</b>మెరుగుపరిచబడిన రంగ నాటకం, అదే సమయాన్ని చిత్రించే రంగ నాటకం లో భూపతి వారి
+                                    శృంగారాది నాటకాలు.
+                                </td>
+                                <td style="text-align: center;">50/-</td>
+                                <td style="text-align: center;">00000000000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Table for Book 4 -->
+                    <table class="book-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 10%; text-align: center;"><u>Book</u></th>
+                                <th style="width: 10%; text-align: center;"><u>Title</u></th>
+                                <th style="width: 34%;text-align: center;"><u>Description</u></th>
+                                <th style="width: 5%;text-align: center;"><u>Price</u></th>
+                                <th style="width: 5%;text-align: center;"><u>Contact</u></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Book 4: Placeholder for Tree Structure -->
+                            <tr>
+                                <td style="text-align: center;">
+                                    <img src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705855528/barrister-parvateesam-telugubook-original-imagm99wfh2gfpp5_hpxcgq.webp"
+                                        alt="Telugu Book 3 Logo" class="sub-book-logo">
+                                </td>
+                                <td style="color: hsl(0, 83%, 2%);text-align: center;"><b>బారిష్టర్ పార్వతీశం</b></td>
+                                <td><b>ప్రస్తుత కహాని:</b><br>
+                                    <b>👉</b>"బారిష్టర్ పార్వతీశం" ఒక ఆత్మకథాత్మక కథానాయకుడి దృష్టికోనాత్మక కథనం.<br>
+                                    <b>పరిస్థితికి అవకాశం కలిగిపోవడం:</b><br>
+                                    <b>👉</b>పార్వతీశం పరిస్థితికి అవకాశం కలిగిపోవడం వలన ఆకస్మికంగా పరిస్థితుల తో
+                                    పరిచయమవుతుంది.
+                                </td>
+                                <td style="text-align: center;">50/-</td>
+                                <td style="text-align: center;">00000000000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+    </section>
+
+
+    <section class="language-books">
+        <!-- Tamil Column -->
+        <div class="column tamil" style="background-color: hsl(90, 33%, 94%); display: none;">
+            <div style="text-align: center;">
+                <img src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705984614/_48733d5a-a169-485a-88f8-b95e80bbd499_t9dlh0.jpg"
+                    alt="Telugu Book Logo" class="book-logo"
+                    style="max-width: 200px; max-height: 200px; text-align: center;">
+                <h2 style="color: #531b4e; font-size: 24px; margin-top: 10px;"><b>லிப்ராவர்ஸில் தமிழ் புத்தகங்களை
+                        ஆராயுங்கள்.</b></h2>
+                <p class="book-description" style="font-size: 16px; color: #333; line-height: 1.5;">
+                    லிப்ராவர்ஸில் தெலுங்கு புத்தகங்களை அறிந்து கொள்ளவும். டெலிகாஸ்ட் கிளாஸிக்ஸிலிருந்து புனிதமான சமகாலின
+                    கதைகளுக்கு, வேதிகளுக்கு உலகில் ஒரு அனுகரச யாத்ரையை அனுபவிக்கவும். லிப்ராவர்ஸ் உங்களுக்கு தெலுங்கு
+                    இலக்கியத்தின் அநிவார்ய வாசகர்களுக்கு அறியப்படுகிறது.
+                    ஒவ்வொரு பக்கத்திலும் அப்பகுதிகளுக்கு அனைத்து அதிரடிகளும், அநேகமான கதைகளும், விரிவுந்த சிறுகதைகளும்
+                    உள்ளன.
+                </p>
+                <ul class="book-highlights" style="list-style: none; padding: 0; margin: 20px 0;">
+                    <h1 style="font-size: 20px; color: hsl(231, 92%, 52%); margin-bottom: 10px;"><b><u>புத்தக
+                                முகவர்த்தனைகள்</u></b></h1>
+                    <li style="color: #197b91; font-size: 18px; margin-bottom: 5px;">சிறந்த விற்பனை</li>
+                    <li style="color: #197b91; font-size: 18px; margin-bottom: 5px;">விருதாங்கிய நாவல்கள்</li>
+                    <li style="color: #197b91; font-size: 18px;">களவியல் இலக்கியம்</li>
+                </ul>
+            </div>
+            <br>
+            <!-- Table for Book 1 -->
+            <table class="book-table">
+                <thead>
+                    <tr>
+                        <th style="width: 10%; text-align: center;"><u>Book</u></th>
+                        <th style="width: 12%; text-align: center;"><u>Title</u></th>
+                        <th style="width: 34%;text-align: center;"><u>Description</u></th>
+                        <th style="width: 5%;text-align: center;"><u>Price</u></th>
+                        <th style="width: 5%;text-align: center;"><u>Contact</u></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Book 1: Example Tree Structure -->
+                    <tr>
+                        <td style="text-align: center;">
+                            <img src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705986061/Ponniyin_Selvan_from_Jaya_Bakti_ut6bfe.jpg"
+                                alt="Tamil Book 1 Logo" class="sub-book-logo">
+                        </td>
+                        </td>
+                        <td style="color: #010801;text-align: center;"><b>பொன்னியின் செல்வன்</b></td>
+                        <td><b>👉</b>பொன்னியின் செல்வன் (Ponniyin Selvan)<br>
+                            <b>👉</b>கல்கி கிருஷ்ணமூர்த்தி எழுதிய தமிழ் புகைப்படம்.<br>
+                            <b>👉</b>ஐம்பது குரல் உரைநடையில் கதை.<br>
+                            <b>👉</b>புராதன சீர்கேரத்திற்கு முகாம்.<br>
+                            <b>👉</b>புராதன தமிழ் இதிகாச உருவாக்கிய இதிகாசம்.<br>
+                            <b>👉</b>பொன்னியின் செல்வனின் பிரமாணித சித்திரங்கள்
+                        </td>
+                        <td style="text-align: center;">50/-</td>
+                        <td style="text-align: center;">00000000000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Table for Book 2 -->
+            <table class="book-table">
+                <thead>
+                    <tr>
+                        <th style="width: 10%; text-align: center;"><u>Book</u></th>
+                        <th style="width: 12%; text-align: center;"><u>Title</u></th>
+                        <th style="width: 34%;text-align: center;"><u>Description</u></th>
+                        <th style="width: 5%;text-align: center;"><u>Price</u></th>
+                        <th style="width: 5%;text-align: center;"><u>Contact</u></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Book 2: Example Tree Structure -->
+                    <tr>
+                        <td style="text-align: center;">
+                            <img src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705986397/71fkhphCMOL._AC_UF1000_1000_QL80__gatit3.jpg"
+                                alt=" Book 2Tamil Logo" class="sub-book-logo">
+                        </td>
+                        </td>
+                        <td style="color: #010801;"><b>சிவகாமியின் சபதம்</b></td>
+                        <td><b>கதை குறிப்பு:</b><br>
+                            <b>👉</b>புராதன சீர்கேரத்திற்கு முகாம் பெற்று, புராதன தமிழ் இதிகாச உருவாக்கிய இதிகாசம்.<br>
+                            <b>👉</b>சிவகாமியின் சபதம் தொகுதிகளில் அந்தரங்க சர்க்கார், காதல், வீரத்தின் அந்தரங்கம்.<br>
+                            <b>👉</b>இதில் உள்ள சித்திரங்கள் மற்றும் படங்கள் உருவாக்கப்பட்டுள்ளன.<br>
+                            <b>👉</b>கதை அருளியாகிறது, சிறந்த கதைகளை உள்ளடக்கி உள்ளது.<br>
+                            <b>👉</b>புகைப்படம் இதில் சிறந்த கதை உருவாக்குகின்றது.<br>
+                        <td style="text-align: center;">50/-</td>
+                        <td style="text-align: center;">00000000000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Table for Book 3 -->
+            <table class="book-table">
+                <thead>
+                    <tr>
+                        <th style="width: 10%; text-align: center;"><u>Book</u></th>
+                        <th style="width: 12%; text-align: center;"><u>Title</u></th>
+                        <th style="width: 34%;text-align: center;"><u>Description</u></th>
+                        <th style="width: 5%;text-align: center;"><u>Price</u></th>
+                        <th style="width: 5%;text-align: center;"><u>Contact</u></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Book 3: Placeholder for Tree Structure -->
+                    <tr>
+                        <td style="text-align: center;">
+                            <img src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705987157/madhorubagan_fcvm9b.jpg"
+                                alt="Tamil Book 3 Logo" class="sub-book-logo">
+                        </td>
+                        </td>
+                        <td style="color: #010801;"><b>மதுரொபாகன்</b></td>
+                        <td><b>👉</b>மதுரையில் நடைபெற்ற திருமணத்திற்கு முந்திய கதை.<br>
+                            <b>👉</b>காமசூத்ரா காவியமான கதை, அதிக காண விரும்பும் நாடகங்களில் ஒன்று.<br>
+                            <b>👉</b>சமூகத்தில் உள்ளாட்சியை குறைக்கும் மூலம் வாழும் புருஷனின் கதை.<br>
+                            <b>👉</b>அந்தரங்க கதையின் மூலம் பழமொழிகள், கருத்துகள் போன்ற அழகிய உரையின் அமைப்பு.<br>
+                            <b>👉</b>ஆசிரியர் சந்திரசேகர் பேட்டி எழுதிய இந்த நாவலின் உருவாக்கம்.
+                        </td>
+                        <td style="text-align: center;">50/-</td>
+                        <td style="text-align: center;">00000000000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Table for Book 4 -->
+            <table class="book-table">
+                <thead>
+                    <tr>
+                        <th style="width: 10%; text-align: center;"><u>Book</u></th>
+                        <th style="width: 12%; text-align: center;"><u>Title</u></th>
+                        <th style="width: 34%;text-align: center;"><u>Description</u></th>
+                        <th style="width: 5%;text-align: center;"><u>Price</u></th>
+                        <th style="width: 5%;text-align: center;"><u>Contact</u></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Book 4: Placeholder for Tree Structure -->
+                    <tr>
+                        <td style="text-align: center;">
+                            <img src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705988148/91yHgeQ32wL._AC_UY327_FMwebp_QL65__dph3e2.webp"
+                                alt="Tamil Book 4 Logo" class="sub-book-logo">
+                        </td>
+                        <td style="color: #010801;"><b>சிவகாமி பொருள்</b></td>
+                        <td><b>👉</b>மதுரையில் நடைபெற்ற திருமணத்திற்கு முந்திய கதை.<br>
+                            <b>👉</b>காமசூத்ரா காவியமான கதை, அதிக காண விரும்பும் நாடகங்களில் ஒன்று.<br>
+                            <b>👉</b>சமூகத்தில் உள்ளாட்சியை குறைக்கும் மூலம் வாழும் புருஷனின் கதை.<br>
+                            <b>👉</b>அந்தரங்க கதையின் மூலம் பழமொழிகள், கருத்துகள் போன்ற அழகிய உரையின் அமைப்பு.<br>
+                            <b>👉</b>ஆசிரியர் சந்திரசேகர் பேட்டி எழுதிய இந்த நாவலின் உருவாக்கம்.
+                        </td>
+                        <td style="text-align: center;">50/-</td>
+                        <td style="text-align: center;">00000000000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Table for Book 5 -->
+        </div>
+
+    </section>
+
+    <section class="language-books">
+        <!-- Hindi Column (initially hidden) -->
+        <div class="column hindi" style="background-color: hwb(0 100% 0% / 0.767); display: none;">
+            <div style="text-align: center;">
+                <img src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705749478/_b9ede597-dee0-4eb0-a9bb-236a27f1c2fd_qqxzyg.jpg"
+                    alt="Hindi Book Logo" class="book-logo" style="max-width: 100px; max-height: 100px;">
+                <h2 style="color: #531b4e; font-size: 24px; margin-top: 10px;">लिब्रावर्स में हिंदी पुस्तकों का अन्वेषण
+                    करें</h2>
+                <p class="book-description" style="font-size: 16px; color: #333; line-height: 1.5;">
+                    लिब्रावर्स की मंत्रमुग्ध करने वाली दुनिया में एक आकर्षक यात्रा पर निकलें - आपका अंतिम पढ़ने का
+                    गंतव्य।
+                    हिंदी पुस्तकों के विशाल संग्रह में डूब जाएं जो शाश्वत क्लासिक्स से लेकर सम्मोहक समकालीन कथा साहित्य
+                    तक के विविध शैलियों को शामिल करता है।
+                    लिब्रावर्स आपको साहित्य के जादू का पता लगाने के लिए आमंत्रित करता है, जहाँ प्रत्येक पृष्ठ नई रोमांचक
+                    और गहरी कहानी कहने का वादा करता है।
+                </p>
+                <ul class="book-highlights" style="list-style: none; padding: 0; margin: 20px 0;">
+                    <h1 style="font-size: 20px; color: hsl(231, 92%, 52%); margin-bottom: 10px;"><b><u>पुस्तक की
+                                विशेषताएं</u></b></h1>
+                    <li style="color: #197b91; font-size: 18px; margin-bottom: 5px;">बेस्टसेलर्स</li>
+                    <li style="color: #197b91; font-size: 18px; margin-bottom: 5px;">पुरस्कार विजेता उपन्यास</li>
+                    <li style="color: #197b91; font-size: 18px;">क्लासिक साहित्य</li>
+                </ul>
+            </div>
+
+            <!-- Table for Book 1 -->
+            <table class="book-table">
+                <thead>
+                    <tr>
+                        <th style="width: 10%; text-align: center;"><u>पुस्तक</u></th>
+                        <th style="width: 12%; text-align: center;"><u>शीर्षक</u></th>
+                        <th style="width: 34%;text-align: center;"><u>विवरण</u></th>
+                        <th style="width: 5%;text-align: center;"><u>मूल्य</u></th>
+                        <th style="width: 5%;text-align: center;"><u>संपर्क</u></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Book 1: Example Tree Structure -->
+                    <tr>
+                        <td style="text-align: center;">
+                            <img src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705727789/ywwnjoja59folfrfkjw5.jpg"
+                                alt="Hindi Book 1 Logo" class="sub-book-logo">
+                        </td>
+                        <td style="color: #100c04;text-align: center;"><b>रिच डैड और पुअर डैड</b></td>
+                        <td><b>समृद्ध मानसिकता:</b><br>
+                            <b>👉</b>यह पुस्तक समृद्ध मानसिकता को विकसित करने के महत्व पर जोर देती है।<br>
+                            <b>👉</b>कियोसाकी अपने "रिच डैड" और "पुअर डैड" के दृष्टिकोणों और तरीकों की तुलना करते
+                            हैं।<br>
+                            <b>👉</b>रिच डैड उन संपत्तियों को बनाने पर ध्यान केंद्रित करते हैं जो आय उत्पन्न करती हैं,
+                            जबकि पुअर डैड नौकरी की सुरक्षा और पैसे कमाने के पारंपरिक दृष्टिकोण पर जोर देते हैं।
+                        </td>
+                        <td style="text-align: center;">50/-</td>
+                        <td style="text-align: center;">00000000000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Table for Book 2 -->
+            <table class="book-table">
+                <thead>
+                    <tr>
+                        <th style="width: 10%; text-align: center;"><u>पुस्तक</u></th>
+                        <th style="width: 12%; text-align: center;"><u>शीर्षक</u></th>
+                        <th style="width: 34%;text-align: center;"><u>विवरण</u></th>
+                        <th style="width: 5%;text-align: center;"><u>मूल्य</u></th>
+                        <th style="width: 5%;text-align: center;"><u>संपर्क</u></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Book 2: Example Tree Structure -->
+                    <tr>
+                        <td style="text-align: center;">
+                            <img src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705727809/jd6oncpuv8x7udtaiqwf.jpg"
+                                alt="Hindi Book 2 Logo" class="sub-book-logo">
+                        </td>
+                        <td style="color: rgb(10, 19, 10);text-align: center;"><b>द मिरेकल मॉर्निंग</b></td>
+                        <td><b>व्यक्तिगत विकास के लिए सुबह की दिनचर्या:</b><br>
+                            <b>👉</b>"रिच डैड पुअर डैड" के समान, "द मिरेकल मॉर्निंग" सकारात्मक सुबह की दिनचर्या के महत्व
+                            पर जोर देती है।<br>
+                            <b>👉</b>एलरोड एसएवीईआरएस की अवधारणा पेश करते हैं, जिसमें मौन, पुष्टि, दृश्य, व्यायाम,
+                            पढ़ना, लिखना और जर्नलिंग शामिल हैं।<br>
+                            <b>👉</b>यह दिनचर्या व्यक्तिगत विकास को बढ़ाने और दिन की सकारात्मक शुरुआत के लिए डिज़ाइन की
+                            गई है।
+                        </td>
+                        <td style="text-align: center;">50/-</td>
+                        <td style="text-align: center;">00000000000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Table for Book 3 -->
+            <table class="book-table">
+                <thead>
+                    <tr>
+                        <th style="width: 10%; text-align: center;"><u>पुस्तक</u></th>
+                        <th style="width: 12%; text-align: center;"><u>शीर्षक</u></th>
+                        <th style="width: 34%;text-align: center;"><u>विवरण</u></th>
+                        <th style="width: 5%;text-align: center;"><u>मूल्य</u></th>
+                        <th style="width: 5%;text-align: center;"><u>संपर्क</u></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Book 3: Placeholder for Tree Structure -->
+                    <tr>
+                        <td style="text-align: center;">
+                            <img src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705727829/jakgbkuejzn5dpi4a8ss.jpg"
+                                alt="Hindi Book 3 Logo" class="sub-book-logo">
+                        </td>
+                        <td style="color: #030a08;text-align: center;"><b>द अलकेमिस्ट 25वां संस्करण</b></td>
+                        <td><b>यात्रा और परिवर्तन:</b><br>
+                            <b>👉</b>"द अलकेमिस्ट" यात्रा की परिवर्तनकारी शक्ति पर जोर देती है।<br>
+                            <b>👉</b>प्रोटागोनिस्ट, सैंटियागो, एक छिपे हुए खजाने की खोज में एक शारीरिक और आध्यात्मिक
+                            यात्रा पर निकलता है।<br>
+                            <b>👉</b>यह पुस्तक इस विचार को रेखांकित करती है कि सपनों का पीछा केवल एक गंतव्य तक पहुंचने
+                            के बारे में नहीं है, बल्कि आत्म-खोज और व्यक्तिगत विकास के बारे में भी है।
+                        </td>
+                        <td style="text-align: center;">50/-</td>
+                        <td style="text-align: center;">00000000000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Table for Book 4 -->
+            <table class="book-table">
+                <thead>
+                    <tr>
+                        <th style="width: 10%; text-align: center;"><u>पुस्तक</u></th>
+                        <th style="width: 12%; text-align: center;"><u>शीर्षक</u></th>
+                        <th style="width: 34%; text-align: center;"><u>विवरण</u></th>
+                        <th style="width: 5%; text-align: center;"><u>मूल्य</u></th>
+                        <th style="width: 5%; text-align: center;"><u>संपर्क</u></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Book 4: Placeholder for Tree Structure -->
+                    <tr>
+                        <td style="text-align: center;">
+                            <img src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705730048/WhatsApp_Image_2024-01-19_at_09.48.43_3a376edb_umzog4.jpg"
+                                alt="Hindi Book 4 Logo" class="sub-book-logo">
+                        </td>
+                        <td style="color: #0f0d0d; text-align: center;"><b>नियंत्रण प्रणाली पुस्तक</b></td>
+                        <td><b>नियंत्रण प्रणाली डिजाइन और कार्यान्वयन:</b><br>
+                            <b>👉</b>एक प्रमुख विशेषता नियंत्रण प्रणाली डिजाइन पद्धतियों का कवरेज है।<br>
+                            <b>👉</b>इसमें नियंत्रकों को डिजाइन करने के तरीके, प्रणाली प्रदर्शन का विश्लेषण करने के
+                            तरीके, और नियंत्रण रणनीतियों को लागू करने के तरीके शामिल हैं। कार्यान्वयन के व्यावहारिक
+                            पहलू,<br>
+                            <b>👉</b>जिसमें सॉफ़्टवेयर टूल और सिमुलेशन का उपयोग भी शामिल हो सकता है।
+                        </td>
+                        <td style="text-align: center;">50/-</td>
+                        <td style="text-align: center;">00000000000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <section class="language-books">
+        <!-- Marathi Column (initially hidden) -->
+        <div class="column marathi" style="background-color: hwb(0 100% 0% / 0.767); display: none;">
+            <div style="text-align: center;">
+                <img src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705749478/_b9ede597-dee0-4eb0-a9bb-236a27f1c2fd_qqxzyg.jpg"
+                    alt="Marathi Book Logo" class="book-logo" style="max-width: 100px; max-height: 100px;">
+                <h2 style="color: #531b4e; font-size: 24px; margin-top: 10px;">लिब्राव्हर्स येथे मराठी पुस्तके शोधा</h2>
+                <p class="book-description" style="font-size: 16px; color: #333; line-height: 1.5;">
+                    लिब्राव्हर्सच्या मोहक जगात रममाण व्हा - तुमचे अंतिम वाचन गंतव्य.
+                    कालातीत क्लासिक्सपासून ते आकर्षक समकालीन कल्पनारम्य पर्यंत विविध शैलींमध्ये पसरलेल्या मराठी
+                    पुस्तकांच्या विस्तृत संग्रहात बुडून जा.
+                    लिब्राव्हर्स तुम्हाला साहित्याच्या जादूची शोध लावण्यासाठी आमंत्रित करते, जिथे प्रत्येक पृष्ठ नवीन
+                    साहसांची आणि सखोल कथाकथनाची वचनबद्धता धरून आहे.
+                </p>
+                <ul class="book-highlights" style="list-style: none; padding: 0; margin: 20px 0;">
+                    <h1 style="font-size: 20px; color: hsl(231, 92%, 52%); margin-bottom: 10px;"><b><u>पुस्तक
+                                वैशिष्ट्ये</u></b></h1>
+                    <li style="color: #197b91; font-size: 18px; margin-bottom: 5px;">बेस्टसेलर</li>
+                    <li style="color: #197b91; font-size: 18px; margin-bottom: 5px;">पुरस्कार विजेते कादंबऱ्या</li>
+                    <li style="color: #197b91; font-size: 18px;">क्लासिक साहित्य</li>
+                </ul>
+            </div>
+
+            <!-- Table for Book 1 -->
+            <table class="book-table">
+                <thead>
+                    <tr>
+                        <th style="width: 10%; text-align: center;"><u>पुस्तक</u></th>
+                        <th style="width: 12%; text-align: center;"><u>शीर्षक</u></th>
+                        <th style="width: 34%; text-align: center;"><u>विवरण</u></th>
+                        <th style="width: 5%; text-align: center;"><u>किंमत</u></th>
+                        <th style="width: 5%; text-align: center;"><u>संपर्क</u></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Book 1: Example Tree Structure -->
+                    <tr>
+                        <td style="text-align: center;"><img
+                                src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705727789/ywwnjoja59folfrfkjw5.jpg"
+                                alt="Marathi Book 1 Logo" class="sub-book-logo"></td>
+                        <td style="color: #100c04;text-align: center;"><b>रिच डॅड आणि पुअर डॅड</b></td>
+                        <td><b>संपत्ती मानसिकता:</b><br>
+                            <b>👉</b>हे पुस्तक संपत्ती मानसिकता विकसित करण्याचे महत्त्व सांगते.<br>
+                            <b>👉</b>कियोसाकी त्यांच्या "रिच डॅड" आणि "पुअर डॅड" यांच्या वृत्ती आणि दृष्टिकोनांचा तौलनिक
+                            करतात.<br>
+                            <b>👉</b>रिच डॅड उत्पन्न निर्माण करणाऱ्या मालमत्तांवर लक्ष केंद्रित करतो, तर पुअर डॅड
+                            नोकरीच्या सुरक्षिततेवर आणि पैसे कमवण्याच्या पारंपरिक दृष्टिकोनावर जोर देतो.
+                        </td>
+                        <td style="text-align: center;">५०/-</td>
+                        <td style="text-align: center;">00000000000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Table for Book 2 -->
+            <table class="book-table">
+                <thead>
+                    <tr>
+                        <th style="width: 10%; text-align: center;"><u>पुस्तक</u></th>
+                        <th style="width: 12%; text-align: center;"><u>शीर्षक</u></th>
+                        <th style="width: 34%; text-align: center;"><u>विवरण</u></th>
+                        <th style="width: 5%; text-align: center;"><u>किंमत</u></th>
+                        <th style="width: 5%; text-align: center;"><u>संपर्क</u></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Book 2: Example Tree Structure -->
+                    <tr>
+                        <td style="text-align: center;">
+                            <img src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705727809/jd6oncpuv8x7udtaiqwf.jpg"
+                                alt="Marathi Book 2 Logo" class="sub-book-logo">
+                        </td>
+                        <td style="color: rgb(10, 19, 10);text-align: center;"><b>द मिरॅकल मॉर्निंग</b></td>
+                        <td><b>वैयक्तिक विकासासाठी सकाळची दिनचर्या:</b><br>
+                            <b>👉</b>"रिच डॅड पुअर डॅड" प्रमाणे, "द मिरॅकल मॉर्निंग" सकाळच्या सकारात्मक दिनचर्येचे
+                            महत्त्व सांगते.<br>
+                            <b>👉</b>एलरोड SAVERS या संकल्पनेची ओळख करून देतो, ज्याचा अर्थ Silence, Affirmations,
+                            Visualization, Exercise, Reading, Scribing आणि जर्नलिंग थीम्स.<br>
+                            <b>👉</b>ही दिनचर्या वैयक्तिक विकास वाढवण्यासाठी आणि दिवसासाठी सकारात्मक टोन सेट करण्यासाठी
+                            डिझाइन केलेली आहे.
+                        </td>
+                        <td style="text-align: center;">५०/-</td>
+                        <td style="text-align: center;">00000000000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Table for Book 3 -->
+            <table class="book-table">
+                <thead>
+                    <tr>
+                        <th style="width: 10%; text-align: center;"><u>पुस्तक</u></th>
+                        <th style="width: 12%; text-align: center;"><u>शीर्षक</u></th>
+                        <th style="width: 34%; text-align: center;"><u>विवरण</u></th>
+                        <th style="width: 5%; text-align: center;"><u>किंमत</u></th>
+                        <th style="width: 5%; text-align: center;"><u>संपर्क</u></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Book 3: Placeholder for Tree Structure -->
+                    <tr>
+                        <td style="text-align: center;">
+                            <img src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705727829/jakgbkuejzn5dpi4a8ss.jpg"
+                                alt="Marathi Book 3 Logo" class="sub-book-logo">
+                        </td>
+                        <td style="color: #030a08;text-align: center;"><b>द अल्केमिस्ट २५वी आवृत्ती</b></td>
+                        <td><b>प्रवास आणि रूपांतरण:</b><br>
+                            <b>👉</b>"द अल्केमिस्ट" प्रवासाच्या परिवर्तनकारी शक्तीवर जोर देते.<br>
+                            <b>👉</b>मुख्य पात्र, सॅंटियागो, लपवलेल्या खजिन्याच्या शोधात एक भौतिक आणि आध्यात्मिक प्रवास
+                            सुरू करतो.<br>
+                            <b>👉</b>हे पुस्तक स्वप्नांच्या शोधाचा फक्त एका गंतव्यावर पोहोचण्याबद्दल नसून आत्म-शोध आणि
+                            वैयक्तिक वाढ याबद्दल देखील आहे.
+                        </td>
+                        <td style="text-align: center;">५०/-</td>
+                        <td style="text-align: center;">00000000000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- पुस्तक ४ साठी तक्ता -->
+            <table class="book-table">
+                <thead>
+                    <tr>
+                        <th style="width: 10%; text-align: center;"><u>पुस्तक</u></th>
+                        <th style="width: 12%; text-align: center;"><u>शीर्षक</u></th>
+                        <th style="width: 34%; text-align: center;"><u>विवरण</u></th>
+                        <th style="width: 5%; text-align: center;"><u>किंमत</u></th>
+                        <th style="width: 5%; text-align: center;"><u>संपर्क</u></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- पुस्तक ४: वृक्ष रचना साठी प्लेसहोल्डर -->
+                    <tr>
+                        <td style="text-align: center;">
+                            <img src="https://res.cloudinary.com/dvvrna35w/image/upload/v1705730048/WhatsApp_Image_2024-01-19_at_09.48.43_3a376edb_umzog4.jpg"
+                                alt="मराठी पुस्तक ४ लोगो" class="sub-book-logo">
+                        </td>
+                        <td style="color: #0f0d0d; text-align: center;"><b>नियंत्रण प्रणाली पुस्तक</b></td>
+                        <td><b>नियंत्रण प्रणाली डिझाइन आणि अंमलबजावणी:</b><br>
+                            <b>👉</b>एक प्रमुख वैशिष्ट्य म्हणजे नियंत्रण प्रणाली डिझाइन पद्धतींचे कव्हरेज.<br>
+                            <b>👉</b>यामध्ये नियंत्रक डिझाइन करण्याच्या पद्धती, प्रणाली कार्यक्षमता विश्लेषित करण्याच्या
+                            पद्धती आणि नियंत्रण धोरणे अंमलात आणण्याच्या पद्धतींचा समावेश आहे. अंमलबजावणीचे व्यावहारिक
+                            पैलू,<br>
+                            <b>👉</b>ज्यामध्ये सॉफ्टवेअर साधने आणि सिम्युलेशनचा वापर देखील समाविष्ट असू शकतो.
+                        </td>
+                        <td style="text-align: center;">५०/-</td>
+                        <td style="text-align: center;">00000000000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </section>
+
+
+
+
+            <!-- Task 2: Search Bar -->
+            <div class="search-bar" style="display: none;">
+                <input type="text" id="search" oninput="filterBooks(this.value)">
+            </div>
+            <script>
+                // JavaScript code to handle language selection and display
+                function changeLanguage(language) {
+                    // Hide all language sections
+                    document.querySelectorAll('.language-books .column').forEach(function (column) {
+                        column.style.display = 'none';
+                    });
+
+                    // Display the selected language section
+                    if (language !== 'select') {
+                        var selectedLanguage = document.querySelector(`.language-books .column.${language}`);
+                        if (selectedLanguage) {
+                            selectedLanguage.style.display = 'block';
+                        }
+                    }
+                }
+
+                // Initially hide all language sections
+                document.addEventListener('DOMContentLoaded', function () {
+                    document.querySelectorAll('.language-books .column').forEach(function (column) {
+                        column.style.display = 'none';
+                    });
+                });
+            </script>
+
+
+
+</body>
+
+</html>
+``

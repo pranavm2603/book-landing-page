@@ -1,0 +1,163 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+header {
+    background-color: #f5eb91; /* Soft beige color */
+    padding: 10px;
+    text-align: center;
+    color: #0e0101;
+    font-size: large;
+}
+.logo-container {
+    text-align: center;
+}
+.custom-underline {
+    text-decoration: underline dashed #7bc4c7; /* Adjust the style and color as needed */
+}
+
+
+.logo {
+    width: 100cap; /* Adjust the width as needed */
+    height: 100cap; /* Adjust the height as needed */
+    object-fit: fill; /* Maintain aspect ratio and cover the container */
+    object-position: center; /* Center the image within the container */
+    border-radius: 10px; /* Add a border-radius for a square shape */
+}
+
+/* Additional styles for the dropdown and search */
+.language-select {
+    margin-bottom: 20px;
+    text-align: center; /* Center the text */
+}
+
+/* Style for the select label */
+.select-label {
+    display: block;
+    margin-bottom: 5px; /* Add some spacing below the label */
+}
+
+/* Style for the select wrapper (to make it look like a button) */
+.select-wrapper {
+    display: inline-block;
+    position: relative;
+    text-align: center; /* Align the button to the left */
+}
+
+/* Style for the select dropdown */
+select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid hsl(0, 6%, 7%);
+    border-radius: 4px;
+    box-sizing: initial;
+    color: #070719; /* Change the text color to blue */
+    cursor: grab;
+}
+
+/* Style for the "button" appearance */
+.select-wrapper::before {
+    content: '▼'; /* Unicode character for a downward arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #531b4e;
+    pointer-events: none; /* Ensure the arrow doesn't interfere with the select */
+}
+
+/* Add this CSS to hide the arrow when a language is selected */
+.arrow-hidden::before {
+    display: ruby;
+}
+
+/* Style for the search input */
+input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #110f0f;
+    border-radius: 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Add border styles for tables */
+/* Add border styles for tables */
+.book-table {
+    width: 100%;
+    border-collapse: initial;
+    margin-bottom: 50px;
+    color: black;
+}
+
+.book-table th,
+.book-table td {
+    border: 1px solid hsl(0, 53%, 6%);
+    padding: 8px; /* Adjust with a suitable numeric value */
+    text-align: left;
+}
+
+.book-table th {
+    background-color: #f6faf7;
+}
+
+/* Responsive styles for language sections */
+@media screen and (max-width: 768px) {
+    .language-books {
+        flex-direction: column;
+    }
+
+    .column {
+        margin: 10px 0;
+    }
+}
+
+/* Styles for different language sections */
+.column.english {
+    background-color: hwb(186 2% 72%); /* Light Pink */
+}
+
+.column.telugu {
+    background-color: hsl(276, 38%, 54%); /* Light Green */
+}
+
+.column.tamil {
+    background-color: hsl(189, 34%, 41%); /* Light Olive Green */
+}
+
+.sub-book-logo {
+    max-width: 50px; /* Adjust the maximum width as needed */
+}
+
+/* You can customize this style further if needed */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
